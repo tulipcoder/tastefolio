@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Recipe Cards</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>🌮 Recipe Gallery</h1>
+    <select id="cuisineFilter">
+      <option value="all">All Cuisines</option>
+      <option value="italian">Italian</option>
+      <option value="indian">Indian</option>
+      <option value="mexican">Mexican</option>
+      <option value="chinese">Chinese</option>
+      <option value="american">American</option>
+    </select>
+  </header>
+  <!-- Rating Filter -->
+    <label>
+      Min Rating:
+      <select id="ratingFilter">
+        <option value="0">All</option>
+        <option value="3">3★ & up</option>
+        <option value="4">4★ & up</option>
+        <option value="5">5★ only</option>
+      </select>
+    </label>
+
+    <!-- Search Bar -->
+    <label>
+      Search:
+      <input type="text" id="searchInput" placeholder="Search recipes..." />
+    </label>
+    <!-- Theme Toggle -->
+    <label>
+      Theme:
+      <button id="themeToggle">🌙</button>
+    </label>
+  </div>
+</header>
+
+  <main class="card-container">
+
+    <!-- Recipe Card 1 -->
+    <div class="card" data-cuisine="italian">
+      <img src="c:\Users\ASUS\OneDrive\pasta.jpg" alt="Pasta Primavera" />
+      <div class="card-body">
+        <h2>Pasta Primavera</h2>
+        <p class="description">A healthy and colorful Italian pasta with fresh vegetables.</p>
+        <div class="rating">⭐ ⭐ ⭐ ⭐ ☆</div>
+
+        <button class="toggle-btn">Show Ingredients</button>
+        <div class="details hidden">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>Pasta</li>
+            <li>Bell peppers</li>
+            <li>Broccoli</li>
+            <li>Olive oil</li>
+            <li>Garlic</li>
+          </ul>
+          <h4>Preparation:</h4>
+          <p>Boil pasta. Stir-fry vegetables. Mix together. Serve hot.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recipe Card 2 -->
+    <div class="card" data-cuisine="indian">
+      <img src="c:\Users\ASUS\OneDrive\Paneer-Tikka.jpg" alt="Paneer Tikka" />
+      <div class="card-body">
+        <h2>Paneer Tikka</h2>
+        <p class="description">Grilled Indian cottage cheese cubes marinated with spices.</p>
+        <div class="rating">⭐ ⭐ ⭐ ⭐ ⭐</div>
+
+        <button class="toggle-btn">Show Ingredients</button>
+        <div class="details hidden">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>Paneer</li>
+            <li>Yogurt</li>
+            <li>Spices</li>
+            <li>Capsicum</li>
+            <li>Onion</li>
+          </ul>
+          <h4>Preparation:</h4>
+          <p>Marinate paneer, skewer with veggies, grill or bake, and serve with chutney.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recipe Card 3 -->
+    <div class="card" data-cuisine="mexican">
+      <img src="c:\Users\ASUS\OneDrive\tacos.jpg" alt="Tacos" />
+      <div class="card-body">
+        <h2>Veggie Tacos</h2>
+        <p class="description">Crispy taco shells filled with spicy veggies and sauces.</p>
+        <div class="rating">⭐ ⭐ ⭐ ⭐ ☆</div>
+
+        <button class="toggle-btn">Show Ingredients</button>
+        <div class="details hidden">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>Taco shells</li>
+            <li>Beans</li>
+            <li>Cheese</li>
+            <li>Tomatoes</li>
+            <li>Lettuce</li>
+          </ul>
+          <h4>Preparation:</h4>
+          <p>Stuff taco shells with all ingredients. Top with sauces. Serve fresh.</p>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Recipe Card 4 -->
+<div class="card" data-cuisine="chinese">
+  <img src="c:\Users\ASUS\OneDrive\fried rice.webp" alt="Fried Rice" />
+  <div class="card-body">
+    <h2>Fried Rice</h2>
+    <p class="description">Classic Chinese fried rice with veggies and soy sauce.</p>
+    <div class="rating">⭐ ⭐ ⭐ ⭐ ☆</div>
+
+    <button class="toggle-btn">Show Ingredients</button>
+    <div class="details hidden">
+      <h4>Ingredients:</h4>
+      <ul>
+        <li>Cooked rice</li>
+        <li>Carrots</li>
+        <li>Peas</li>
+        <li>Soy sauce</li>
+        <li>Egg</li>
+      </ul>
+      <h4>Preparation:</h4>
+      <p>Fry vegetables, add egg, then mix with rice and soy sauce. Serve hot.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Recipe Card 5 -->
+<div class="card" data-cuisine="american">
+  <img src="c:\Users\ASUS\OneDrive\burger.webp" alt="Cheeseburger" />
+  <div class="card-body">
+    <h2>Cheeseburger</h2>
+    <p class="description">Juicy beef patty with melted cheese in a toasted bun.</p>
+    <div class="rating">⭐ ⭐ ⭐ ⭐ ⭐</div>
+
+    <button class="toggle-btn">Show Ingredients</button>
+    <div class="details hidden">
+      <h4>Ingredients:</h4>
+      <ul>
+        <li>Burger bun</li>
+        <li>Beef patty</li>
+        <li>Cheese slice</li>
+        <li>Lettuce</li>
+        <li>Onion & Tomato</li>
+      </ul>
+      <h4>Preparation:</h4>
+      <p>Grill patty, toast bun, layer ingredients, and enjoy!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Recipe Card 6 -->
+<div class="card" data-cuisine="indian">
+  <img src="c:\Users\ASUS\OneDrive\butter chicken.jpg" alt="Butter Chicken" />
+  <div class="card-body">
+    <h2>Butter Chicken</h2>
+    <p class="description">Creamy tomato-based chicken curry loved across India.</p>
+    <div class="rating">⭐ ⭐ ⭐ ⭐ ⭐</div>
+
+    <button class="toggle-btn">Show Ingredients</button>
+    <div class="details hidden">
+      <h4>Ingredients:</h4>
+      <ul>
+        <li>Chicken</li>
+        <li>Butter</li>
+        <li>Tomato puree</li>
+        <li>Cream</li>
+        <li>Spices</li>
+      </ul>
+      <h4>Preparation:</h4>
+      <p>Cook marinated chicken, simmer in buttery tomato gravy, finish with cream.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Recipe Card 7 -->
+<div class="card" data-cuisine="mexican">
+  <img src="c:\Users\ASUS\OneDrive\veg burrito.jpg" alt="Burrito" />
+  <div class="card-body">
+    <h2>Veg Burrito</h2>
+    <p class="description">Wrapped tortilla filled with beans, rice, salsa, and cheese.</p>
+    <div class="rating">⭐ ⭐ ⭐ ⭐ ☆</div>
+
+    <button class="toggle-btn">Show Ingredients</button>
+    <div class="details hidden">
+      <h4>Ingredients:</h4>
+      <ul>
+        <li>Tortilla</li>
+        <li>Rice</li>
+        <li>Beans</li>
+        <li>Cheese</li>
+        <li>Salsa</li>
+      </ul>
+      <h4>Preparation:</h4>
+      <p>Layer fillings on tortilla, wrap tightly, and toast or grill.</p>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <script>
+    // Filter by cuisine
+    document.getElementById('cuisineFilter').addEventListener('change', function () {
+      const value = this.value;
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.style.display = (value === 'all' || card.dataset.cuisine === value) ? 'block' : 'none';
+      });
+    });
+
+    // Toggle ingredients/preparation
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const details = btn.nextElementSibling;
+        details.classList.toggle('hidden');
+        btn.textContent = details.classList.contains('hidden') ? 'Show Ingredients' : 'Hide Details';
+      });
+    });
+
+
+  // Rating filter
+  document.getElementById('ratingFilter').addEventListener('change', filterRecipes);
+
+  // Search input
+  document.getElementById('searchInput').addEventListener('input', filterRecipes);
+
+  function filterRecipes() {
+    const cuisine = document.getElementById('cuisineFilter').value;
+    const rating = parseInt(document.getElementById('ratingFilter').value);
+    const search = document.getElementById('searchInput').value.toLowerCase();
+
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      const cuisineMatch = cuisine === 'all' || card.dataset.cuisine === cuisine;
+      const ratingMatch = (card.querySelector('.rating').innerText.match(/⭐/g) || []).length >= rating;
+      const title = card.querySelector('h2').innerText.toLowerCase();
+      const searchMatch = title.includes(search);
+      card.style.display = (cuisineMatch && ratingMatch && searchMatch) ? 'block' : 'none';
+    });
+  }
+
+  // Theme toggle
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const icon = document.getElementById('themeToggle');
+    icon.textContent = document.body.classList.contains('dark') ? '☀' : '🌙';
+  });
+  </script>
+
+</body>
+</html>
